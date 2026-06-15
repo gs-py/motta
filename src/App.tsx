@@ -13,6 +13,10 @@ import { Prologue } from "./components/sections/Prologue";
 import { Timeline } from "./components/sections/Timeline";
 import { Distance } from "./components/sections/Distance";
 import { ByTheNumbers } from "./components/sections/ByTheNumbers";
+import { OurYear } from "./components/sections/OurYear";
+import { MeVsYou } from "./components/sections/MeVsYou";
+import { WhoFeelsWhat } from "./components/sections/WhoFeelsWhat";
+import { ReportCard } from "./components/sections/ReportCard";
 import { OurMilestones } from "./components/sections/OurMilestones";
 import { AboutHer } from "./components/sections/AboutHer";
 import { Gallery } from "./components/sections/Gallery";
@@ -30,6 +34,10 @@ const CHAPTERS: Chapter[] = [
   { id: "story", label: "Our meetings" },
   { id: "distance", label: "The distance" },
   { id: "numbers", label: "Us in numbers" },
+  { id: "rhythm", label: "Our year" },
+  { id: "vs", label: "Me vs You" },
+  { id: "fingerprint", label: "Who feels what" },
+  { id: "report", label: "Report card" },
   { id: "milestones", label: "How we grew" },
   { id: "about", label: "All her" },
   { id: "gallery", label: "Gallery" },
@@ -78,6 +86,10 @@ export default function App() {
           <Timeline />
           <Distance />
           <ByTheNumbers />
+          <OurYear />
+          <MeVsYou />
+          <WhoFeelsWhat />
+          <ReportCard />
           <OurMilestones />
           <AboutHer />
           <Gallery />

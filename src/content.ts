@@ -224,6 +224,88 @@ export const content = {
       { emoji: "💬", text: "“Motta Kunju se mera pyar hogaya” ×300 — the great love-flood of 28 May" },
       { emoji: "🗣️", text: "“da” vs “muthe” — the two words that are just ours" },
     ],
+
+    // ---- Our year, month by month ----
+    months: [
+      { label: "Oct", value: 6905 },
+      { label: "Nov", value: 11124 },
+      { label: "Dec", value: 16242 },
+      { label: "Jan", value: 9656 },
+      { label: "Feb", value: 7317 },
+      { label: "Mar", value: 7372 },
+      { label: "Apr", value: 9040 },
+      { label: "May", value: 11188 },
+      { label: "Jun", value: 3831 },
+    ],
+    monthsNote: "December was our loudest month — the month we fell.",
+    // Which day is most ours (Mon → Sun)
+    weekdays: [
+      { label: "Mon", value: 12391 },
+      { label: "Tue", value: 11878 },
+      { label: "Wed", value: 8665 },
+      { label: "Thu", value: 10937 },
+      { label: "Fri", value: 12332 },
+      { label: "Sat", value: 12119 },
+      { label: "Sun", value: 14353 },
+    ],
+    topDays: [
+      { date: "5 May 2026", count: 1848 },
+      { date: "27 Jan 2026", count: 1560 },
+      { date: "4 Dec 2025", count: 1546 },
+      { date: "27 Oct 2025", count: 1446 },
+      { date: "10 Feb 2026", count: 1290 },
+    ],
+
+    // ---- Me vs You — playful head to head (me = Gladwin, you = Divs) ----
+    versus: [
+      { label: "Words written", me: 157906, you: 118897, unit: "", decimals: 0, lowerWins: false },
+      { label: "Conversations started", me: 155, you: 82, unit: "", decimals: 0, lowerWins: false },
+      { label: "Questions asked", me: 159, you: 574, unit: "", decimals: 0, lowerWins: false },
+      { label: "Photos & videos sent", me: 630, you: 1211, unit: "", decimals: 0, lowerWins: false },
+      { label: "Emojis per message", me: 0.13, you: 0.23, unit: "", decimals: 2, lowerWins: false },
+      { label: "Faster to reply", me: 5.2, you: 3.7, unit: " min", decimals: 1, lowerWins: true },
+    ],
+    versusNote: "Different strengths, same effort — that's the whole secret.",
+
+    // ---- NLP emotional fingerprint — who feels what (me = Gladwin, you = Divs) ----
+    // Tagged by running each message through a multilingual emotion lexicon.
+    emotionByPerson: [
+      { emotion: "Love", me: 510, you: 891 },
+      { emotion: "Care", me: 496, you: 418 },
+      { emotion: "Happiness", me: 406, you: 489 },
+      { emotion: "Affection", me: 380, you: 312 },
+      { emotion: "Appreciation", me: 239, you: 351 },
+      { emotion: "Excitement", me: 348, you: 157 },
+      { emotion: "Sadness", me: 201, you: 622 },
+      { emotion: "Anxiety", me: 241, you: 272 },
+      { emotion: "Frustration", me: 373, you: 196 },
+      { emotion: "Making peace", me: 47, you: 185 },
+    ],
+    persona: {
+      me: {
+        name: "Me",
+        emojis: ["😂", "😌", "🤭", "🙂"],
+        title: "The steady one",
+        line: "More care, more excitement, the first to crack a joke — the calm that holds us together.",
+      },
+      you: {
+        name: "You",
+        emojis: ["🤭", "😌", "🥲", "🔪"],
+        title: "The heart",
+        line: "You feel everything fully — the most love, the deepest feeling, and always the quickest to make peace.",
+      },
+    },
+    personaNote:
+      "Read from how we write — every message tagged for emotion. Two very different hearts, beating in time.",
+
+    // ---- Our relationship report card (scored from the chat) ----
+    overallScore: { label: "Overall", value: 88, blurb: "Thriving — and still growing gentler." },
+    scores: [
+      { label: "Communication", value: 93, blurb: "94% of days active, replies under six minutes." },
+      { label: "Emotional Connection", value: 91, blurb: "114 love-messages and deepening tenderness." },
+      { label: "Stability", value: 82, blurb: "Conflict is rare, and we always find our way back." },
+      { label: "Mutual Effort", value: 86, blurb: "Almost 50 / 50 — both of us, every single day." },
+    ],
   },
 
   // ---- Why I Love You (flip cards) -----------------------------
