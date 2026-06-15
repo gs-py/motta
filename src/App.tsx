@@ -13,10 +13,12 @@ import { Prologue } from "./components/sections/Prologue";
 import { Timeline } from "./components/sections/Timeline";
 import { Distance } from "./components/sections/Distance";
 import { ByTheNumbers } from "./components/sections/ByTheNumbers";
+import { OurMilestones } from "./components/sections/OurMilestones";
 import { AboutHer } from "./components/sections/AboutHer";
 import { Gallery } from "./components/sections/Gallery";
 import { WhyILoveYou } from "./components/sections/WhyILoveYou";
 import { MeltMyHeart } from "./components/sections/MeltMyHeart";
+import { WordsWeSaid } from "./components/sections/WordsWeSaid";
 import { FutureDreams } from "./components/sections/FutureDreams";
 import { Letter } from "./components/sections/Letter";
 import { Surprise } from "./components/sections/Surprise";
@@ -28,10 +30,12 @@ const CHAPTERS: Chapter[] = [
   { id: "story", label: "Our meetings" },
   { id: "distance", label: "The distance" },
   { id: "numbers", label: "Us in numbers" },
+  { id: "milestones", label: "How we grew" },
   { id: "about", label: "All her" },
   { id: "gallery", label: "Gallery" },
   { id: "why", label: "Why I love you" },
   { id: "melt", label: "Little things" },
+  { id: "words", label: "Words we said" },
   { id: "future", label: "Our future" },
   { id: "letter", label: "The letter" },
   { id: "surprise", label: "Surprise" },
@@ -74,10 +78,12 @@ export default function App() {
           <Timeline />
           <Distance />
           <ByTheNumbers />
+          <OurMilestones />
           <AboutHer />
           <Gallery />
           <WhyILoveYou />
           <MeltMyHeart />
+          <WordsWeSaid />
           <FutureDreams />
           <Letter />
           <Surprise />

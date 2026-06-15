@@ -199,6 +199,37 @@ export function ByTheNumbers() {
         </div>
       </Reveal>
 
+      {/* the emotional colours of us */}
+      <Reveal className="glass gradient-border mt-6 rounded-3xl p-7 sm:p-8">
+        <p className="text-xs uppercase tracking-[0.2em] text-lavender/80">
+          The emotional colours of us
+        </p>
+        <div className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+          {n.emotions.map((e, i) => (
+            <div key={e.label}>
+              <div className="mb-1.5 flex items-baseline justify-between text-sm">
+                <span className="text-cream/85">{e.label}</span>
+                <span className="font-serif text-cream/55">{e.pct}%</span>
+              </div>
+              <Bar
+                pct={(e.pct / n.emotions[0].pct) * 100}
+                delay={i * 0.05}
+                className={
+                  i < 3
+                    ? "from-pink to-pink-soft"
+                    : i < 6
+                    ? "from-lavender to-pink"
+                    : "from-lavender-deep to-lavender"
+                }
+              />
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 font-serif text-lg font-light italic text-cream/85">
+          {n.emotionsNote}
+        </p>
+      </Reveal>
+
       {/* we are night people */}
       <Reveal className="glass gradient-border mt-6 rounded-3xl p-7 sm:p-8">
         <div className="mb-6 flex items-center gap-2">

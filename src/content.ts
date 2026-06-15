@@ -150,15 +150,36 @@ export const content = {
       { label: "“Baby”", value: 70 },
       { label: "“Miss you”", value: 66 },
       { label: "“Good morning”", value: 61 },
+      { label: "“Babe”", value: 32 },
+      { label: "“Amoor”", value: 4 },
     ],
     // What we call each other (distinct messages; me = Gladwin, you = Divs)
     nicknames: [
-      { name: "muthe", note: "what you call me", total: 328, me: 109, you: 219 },
-      { name: "kunju", note: "what I call you", total: 232, me: 209, you: 23 },
+      { name: "muthe", note: "pearl · what you call me", total: 328, me: 109, you: 219 },
+      { name: "kunju", note: "little one · what I call you", total: 232, me: 209, you: 23 },
       { name: "da", note: "your little tag for me", total: 129, me: 23, you: 106 },
       { name: "motta kunju", note: "us, in one word", total: 109, me: 107, you: 2 },
       { name: "baby", note: "both of us", total: 70, me: 29, you: 41 },
+      { name: "mone", note: "dear · mostly you", total: 51, me: 7, you: 44 },
+      { name: "mole", note: "dear · mostly me", total: 49, me: 45, you: 4 },
+      { name: "babe", note: "both of us", total: 32, me: 18, you: 14 },
+      { name: "cutie", note: "mostly me", total: 21, me: 18, you: 3 },
     ],
+    // The emotional colours of us (% of all emotion-tagged messages)
+    emotions: [
+      { label: "Love", pct: 18.5 },
+      { label: "Care", pct: 12.1 },
+      { label: "Happiness", pct: 11.8 },
+      { label: "Sadness", pct: 10.9 },
+      { label: "Affection", pct: 9.1 },
+      { label: "Appreciation", pct: 7.8 },
+      { label: "Excitement", pct: 6.7 },
+      { label: "Anxiety", pct: 6.8 },
+      { label: "Reconciliation", pct: 3.1 },
+      { label: "Support", pct: 2.4 },
+    ],
+    emotionsNote:
+      "Mostly love, care and happiness — with all the real, human colours in between.",
     // Messages by hour, 0–23 (we are night people)
     hours: [
       11219, 4419, 1456, 513, 28, 104, 462, 1799, 2103, 2061, 2795, 2746,
@@ -167,6 +188,42 @@ export const content = {
     peakHour: "11 PM",
     busiest: { day: "5 May 2026", count: 1848 },
     closing: "82,675 messages — and every single one led me back to you.",
+
+    // How we grew — milestones pulled from the chat itself
+    milestones: [
+      { date: "07 Oct 2025", title: "The first “Hi”", quote: "Two strangers swapping event photos." },
+      { date: "27 Oct 2025", title: "First time it got real", quote: "“if you have the heart to love so much, wouldn’t God prepare someone who can love you equally.”" },
+      { date: "07 Nov 2025", title: "The first compliment", quote: "“you have silky hair… I really like it.”" },
+      { date: "14 Dec 2025", title: "The first “ily”", quote: "said quietly, almost by accident." },
+      { date: "04 Jan 2026", title: "The 3 a.m. promise", quote: "“I’ll love you for as long as life has us — that’s for sure.”" },
+      { date: "17 Jan 2026", title: "“I love you” made ours", quote: "“love you and I love you are different — from now, say ‘I love you’ to me.”" },
+      { date: "14 Feb 2026", title: "Our first Valentine’s", quote: "“happy valentine’s to my forever valentine.”" },
+      { date: "Feb–Apr 2026", title: "I started building for you", quote: "little apps, and a whole study guide for your exam." },
+      { date: "05 May 2026", title: "We drew our family trees", quote: "and wrote each other into them." },
+      { date: "16 May 2026", title: "Dream-comes-true day", quote: "“you held my hand, leaned on my shoulder…”" },
+    ],
+    // Words we actually said (real lines from the chat)
+    wordsHe: [
+      "I found the one I love.",
+      "I’m so lucky to have you — it means the world to me.",
+      "I never been loved like this before.",
+      "More than you, I’m gonna miss you badly.",
+      "I want to feel loved by you with the same depth even as time passes.",
+    ],
+    wordsShe: [
+      "I will love you for as long as life has us.",
+      "I want to continue loving you forever.",
+      "You’re one of the best things that happened to me.",
+      "No one can ever be more perfect in my eyes than you already are.",
+      "I’ll be the cool aunt for your kids. 🤭",
+    ],
+    // Our inside jokes
+    jokes: [
+      { emoji: "🥚", text: "“Motta Kunju” — our egg-baby name (a.k.a. hybrid motta, motta shaming)" },
+      { emoji: "👩", text: "The “BAD MOMMY” running gag" },
+      { emoji: "💬", text: "“Motta Kunju se mera pyar hogaya” ×300 — the great love-flood of 28 May" },
+      { emoji: "🗣️", text: "“da” vs “muthe” — the two words that are just ours" },
+    ],
   },
 
   // ---- Why I Love You (flip cards) -----------------------------
