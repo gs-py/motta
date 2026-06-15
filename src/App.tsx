@@ -12,6 +12,7 @@ import { Hero } from "./components/sections/Hero";
 import { Prologue } from "./components/sections/Prologue";
 import { Timeline } from "./components/sections/Timeline";
 import { Distance } from "./components/sections/Distance";
+import { ByTheNumbers } from "./components/sections/ByTheNumbers";
 import { AboutHer } from "./components/sections/AboutHer";
 import { Gallery } from "./components/sections/Gallery";
 import { WhyILoveYou } from "./components/sections/WhyILoveYou";
@@ -26,6 +27,7 @@ const CHAPTERS: Chapter[] = [
   { id: "prologue", label: "How we began" },
   { id: "story", label: "Our meetings" },
   { id: "distance", label: "The distance" },
+  { id: "numbers", label: "Us in numbers" },
   { id: "about", label: "All her" },
   { id: "gallery", label: "Gallery" },
   { id: "why", label: "Why I love you" },
@@ -71,6 +73,7 @@ export default function App() {
           <Prologue />
           <Timeline />
           <Distance />
+          <ByTheNumbers />
           <AboutHer />
           <Gallery />
           <WhyILoveYou />

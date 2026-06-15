@@ -119,12 +119,54 @@ export const content = {
     stats: [
       { label: "Kilometers apart", value: 480, suffix: " km" },
       { label: "Calls shared", value: 500, suffix: "+" },
-      { label: "Messages sent", value: 25000, suffix: "+" },
+      { label: "Messages sent", value: 82675, suffix: "" },
       { label: "Memories made", value: 15, suffix: "+" },
     ],
     missAboutHer: "Your calls during my morning walks — and waiting for the day I get to see you again.",
     missAboutBangalore: "Our metro journeys, especially the mornings.",
     specialPlace: "Cubbon Park",
+  },
+
+  // ---- Us, in numbers (from our real chat) ---------------------
+  // Auto-computed from the WhatsApp export — every figure is real.
+  numbers: {
+    eyebrow: "Eight months, counted",
+    headline: [
+      { label: "Messages", value: 82675, suffix: "" },
+      { label: "Days of us", value: 252, suffix: "" },
+      { label: "Days we both showed up", value: 237, suffix: "" },
+      { label: "Longest daily streak", value: 121, suffix: " days" },
+      { label: "Messages a day", value: 349, suffix: "" },
+    ],
+    // Who sent what (51 / 49) — me = Gladwin, you = Divs
+    split: {
+      me: { label: "Me", count: 42508, pct: 51.4 },
+      you: { label: "You", count: 40167, pct: 48.6 },
+    },
+    // Things we said out loud (real counts)
+    phrases: [
+      { label: "“Good night”", value: 146 },
+      { label: "“I love you” moments", value: 114 },
+      { label: "“Baby”", value: 70 },
+      { label: "“Miss you”", value: 66 },
+      { label: "“Good morning”", value: 61 },
+    ],
+    // What we call each other (distinct messages; me = Gladwin, you = Divs)
+    nicknames: [
+      { name: "muthe", note: "what you call me", total: 328, me: 109, you: 219 },
+      { name: "kunju", note: "what I call you", total: 232, me: 209, you: 23 },
+      { name: "da", note: "your little tag for me", total: 129, me: 23, you: 106 },
+      { name: "motta kunju", note: "us, in one word", total: 109, me: 107, you: 2 },
+      { name: "baby", note: "both of us", total: 70, me: 29, you: 41 },
+    ],
+    // Messages by hour, 0–23 (we are night people)
+    hours: [
+      11219, 4419, 1456, 513, 28, 104, 462, 1799, 2103, 2061, 2795, 2746,
+      1514, 2866, 2997, 3996, 2413, 2123, 3048, 3651, 3904, 5021, 7112, 14325,
+    ],
+    peakHour: "11 PM",
+    busiest: { day: "5 May 2026", count: 1848 },
+    closing: "82,675 messages — and every single one led me back to you.",
   },
 
   // ---- Why I Love You (flip cards) -----------------------------
