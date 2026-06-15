@@ -16,7 +16,6 @@ import { ByTheNumbers } from "./components/sections/ByTheNumbers";
 import { OurYear } from "./components/sections/OurYear";
 import { MeVsYou } from "./components/sections/MeVsYou";
 import { WhoFeelsWhat } from "./components/sections/WhoFeelsWhat";
-import { ReportCard } from "./components/sections/ReportCard";
 import { OurMilestones } from "./components/sections/OurMilestones";
 import { AboutHer } from "./components/sections/AboutHer";
 import { Gallery } from "./components/sections/Gallery";
@@ -37,7 +36,6 @@ const CHAPTERS: Chapter[] = [
   { id: "rhythm", label: "Our year" },
   { id: "vs", label: "Me vs You" },
   { id: "fingerprint", label: "Who feels what" },
-  { id: "report", label: "Report card" },
   { id: "milestones", label: "How we grew" },
   { id: "about", label: "All her" },
   { id: "gallery", label: "Gallery" },
@@ -89,7 +87,6 @@ export default function App() {
           <OurYear />
           <MeVsYou />
           <WhoFeelsWhat />
-          <ReportCard />
           <OurMilestones />
           <AboutHer />
           <Gallery />
