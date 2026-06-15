@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --cursor: 1; /* toggled off on touch devices via JS */
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis owns scrolling */
+}
+
+body {
+  margin: 0;
+  background: #0e0816;
+  color: #fff8f3;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 158, 196, 0.3);
+  color: #fff8f3;
+}
+
+/* hide native cursor when custom cursor is active (desktop, fine pointer) */
+@media (pointer: fine) {
+  body.has-cursor,
+  body.has-cursor * {
+    cursor: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#b69dff, #ff9ec4);
+  border-radius: 999px;
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  }
+  .glass-strong {
+    @apply border border-white/15 bg-white/[0.07] backdrop-blur-2xl;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Premium card: glass + gradient hairline + depth + hover glow */
+  .card {
+    @apply relative overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.035] backdrop-blur-xl;
+    box-shadow:
+      0 24px 70px -28px rgba(155, 127, 255, 0.45),
+      0 2px 8px -2px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+    transition: box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.5s ease;
+  }
+  .card:hover {
+    border-color: rgba(255, 158, 196, 0.25);
+    box-shadow:
+      0 40px 110px -30px rgba(255, 158, 196, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-pink-soft via-pink to-lavender bg-clip-text text-transparent;
+  }
+  /* animated, panning gradient text for big titles */
+  .gradient-text-anim {
+    background: linear-gradient(
+      100deg,
+      #ffd6e7,
+      #ff9ec4,
+      #b69dff,
+      #e8b08e,
+      #ffd6e7
+    );
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @apply animate-gradient-pan;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 158, 196, 0.6),
+      rgba(182, 157, 255, 0.6),
+      rgba(232, 176, 142, 0.35)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* thin decorative gradient divider with a center dot */
+  .divider {
+    @apply mx-auto h-px w-24 bg-gradient-to-r from-transparent via-pink/70 to-transparent;
+  }
+}
+
+@layer utilities {
+  /* film grain overlay */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.handwrite {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Letter paper texture */
+.paper {
+  background-color: #fbf3e6;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(255, 240, 220, 0.6) 0%, transparent 50%),
+    repeating-linear-gradient(0deg, rgba(120, 90, 60, 0.04) 0px, rgba(120, 90, 60, 0.04) 1px, transparent 1px, transparent 28px);
+  color: #4a3527;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
