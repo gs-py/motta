@@ -16,6 +16,7 @@ export function Prologue() {
 
   return (
     <Section
+      id="prologue"
       eyebrow="Chapter One"
       title={
         <>

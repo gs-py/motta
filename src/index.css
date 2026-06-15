@@ -143,6 +143,16 @@ body {
   }
 }
 
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  60%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
 .handwrite {
   font-family: "Dancing Script", cursive;
 }

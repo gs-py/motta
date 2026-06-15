@@ -31,6 +31,7 @@ export function Gallery() {
 
   return (
     <Section
+      id="gallery"
       eyebrow="Frozen seconds I never want to lose"
       title={
         <>

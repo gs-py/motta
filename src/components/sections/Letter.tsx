@@ -15,6 +15,7 @@ export function Letter() {
 
   return (
     <Section
+      id="letter"
       eyebrow="From me, to you"
       title={
         <>

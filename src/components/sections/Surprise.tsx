@@ -35,6 +35,7 @@ export function Surprise() {
 
   return (
     <Section
+      id="surprise"
       eyebrow="One more thing"
       title={
         <>

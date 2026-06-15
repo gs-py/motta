@@ -19,6 +19,7 @@ export function FutureDreams() {
 
   return (
     <Section
+      id="future"
       eyebrow="The road still ahead"
       title={
         <>

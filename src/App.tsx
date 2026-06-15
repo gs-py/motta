@@ -5,6 +5,8 @@ import { useLenis } from "./hooks/useLenis";
 import { Loader } from "./components/Loader";
 import { AudioPlayer } from "./components/AudioPlayer";
 import { ScrollProgress } from "./components/fx/ScrollProgress";
+import { Cursor } from "./components/fx/Cursor";
+import { ChapterNav, type Chapter } from "./components/fx/ChapterNav";
 
 import { Hero } from "./components/sections/Hero";
 import { Prologue } from "./components/sections/Prologue";
@@ -18,6 +20,21 @@ import { FutureDreams } from "./components/sections/FutureDreams";
 import { Letter } from "./components/sections/Letter";
 import { Surprise } from "./components/sections/Surprise";
 import { Finale } from "./components/sections/Finale";
+
+const CHAPTERS: Chapter[] = [
+  { id: "top", label: "Start" },
+  { id: "prologue", label: "How we began" },
+  { id: "story", label: "Our meetings" },
+  { id: "distance", label: "The distance" },
+  { id: "about", label: "All her" },
+  { id: "gallery", label: "Gallery" },
+  { id: "why", label: "Why I love you" },
+  { id: "melt", label: "Little things" },
+  { id: "future", label: "Our future" },
+  { id: "letter", label: "The letter" },
+  { id: "surprise", label: "Surprise" },
+  { id: "finale", label: "To my Divs" },
+];
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -37,12 +54,17 @@ export default function App() {
         {loading && <Loader onDone={() => setLoading(false)} />}
       </AnimatePresence>
 
+      <Cursor />
       <ScrollProgress />
+      <ChapterNav chapters={CHAPTERS} />
       <AudioPlayer />
 
-      <main className="relative bg-purple-ink">
+      <main className="grain relative bg-purple-ink">
         {/* persistent deep-space backdrop behind every section */}
         <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-purple-night via-purple-ink to-purple-ink" />
+        <div className="pointer-events-none fixed inset-0 bg-mesh opacity-60" />
+        {/* edge vignette for cinematic framing */}
+        <div className="pointer-events-none fixed inset-0 shadow-[inset_0_0_180px_60px_rgba(8,5,14,0.9)]" />
 
         <div className="relative">
           <Hero onBegin={scrollToStory} />

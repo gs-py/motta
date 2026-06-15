@@ -11,6 +11,7 @@ import { Reveal } from "../fx/Reveal";
 export function WhyILoveYou() {
   return (
     <Section
+      id="why"
       eyebrow="Tap each one"
       title={
         <>

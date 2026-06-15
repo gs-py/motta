@@ -27,17 +27,18 @@ export const Section = forwardRef<
     >
       <div className={cn("mx-auto w-full max-w-6xl", contentClassName)}>
         {(eyebrow || title) && (
-          <Reveal className="mb-12 text-center sm:mb-16">
+          <Reveal className="mb-14 text-center sm:mb-20">
             {eyebrow && (
-              <p className="mb-3 text-xs uppercase tracking-[0.35em] text-pink/80 sm:text-sm">
+              <p className="mb-4 text-[11px] uppercase tracking-[0.35em] text-pink/80 sm:text-xs">
                 {eyebrow}
               </p>
             )}
             {title && (
-              <h2 className="font-serif text-4xl font-light leading-tight text-cream sm:text-5xl md:text-6xl">
+              <h2 className="text-balance font-serif text-[2.5rem] font-light leading-[1.08] tracking-tight text-cream sm:text-5xl md:text-6xl">
                 {title}
               </h2>
             )}
+            <div className="divider mt-7" />
           </Reveal>
         )}
         {children}

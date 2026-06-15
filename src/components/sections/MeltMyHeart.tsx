@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 export function MeltMyHeart() {
   return (
     <Section
+      id="melt"
       eyebrow="The small things"
       title={
         <>

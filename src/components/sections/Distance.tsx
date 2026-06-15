@@ -41,6 +41,7 @@ export function Distance() {
   const { distance } = content;
   return (
     <Section
+      id="distance"
       eyebrow="480 kilometers, one heart"
       title={
         <>

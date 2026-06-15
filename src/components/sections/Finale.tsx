@@ -1,14 +1,17 @@
-import { motion } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import { content } from "@/content";
 import { Aurora } from "../fx/Aurora";
 import { Particles, Stars } from "../fx/Particles";
 import { Reveal } from "../fx/Reveal";
+import { MagneticButton } from "../ui/MagneticButton";
 
 export function Finale({ onReplay }: { onReplay: () => void }) {
   const { finale } = content;
   return (
-    <section className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-6 py-32">
+    <section
+      id="finale"
+      className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-6 py-32"
+    >
       <Aurora />
       <Stars count={70} />
       <Particles count={20} variant="hearts" />
@@ -32,19 +35,14 @@ export function Finale({ onReplay }: { onReplay: () => void }) {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.6}>
-          <motion.button
-            onClick={onReplay}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="gradient-border group mt-14 inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-medium uppercase tracking-[0.2em] text-cream"
-          >
+        <Reveal delay={0.6} className="mt-14 flex justify-center">
+          <MagneticButton onClick={onReplay}>
             <RotateCcw
               size={16}
-              className="transition-transform group-hover:-rotate-180"
+              className="transition-transform duration-500 group-hover:-rotate-180"
             />
             {finale.replay}
-          </motion.button>
+          </MagneticButton>
         </Reveal>
 
         <Reveal delay={0.8}>

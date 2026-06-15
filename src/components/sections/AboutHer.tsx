@@ -28,6 +28,7 @@ export function AboutHer() {
 
   return (
     <Section
+      id="about"
       eyebrow="Everything that is so her"
       title={
         <>
