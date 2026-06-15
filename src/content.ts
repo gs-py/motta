@@ -306,6 +306,48 @@ export const content = {
       { label: "Stability", value: 82, blurb: "Conflict is rare, and we always find our way back." },
       { label: "Mutual Effort", value: 86, blurb: "Almost 50 / 50 — both of us, every single day." },
     ],
+
+    // ---- NLP sentiment: our emotional weather (monthly polarity, −1…+1) ----
+    weather: {
+      eyebrow: "Emotional weather",
+      title: "Every month, the forecast was you",
+      emphasis: "forecast",
+      caption:
+        "Reading back every word we sent, the warmth held across all nine months — coolest in June, brightest in January.",
+      note: "Some months ran warmer than others, but every single one came out on the bright side. That's us.",
+      overall: 0.662,
+      items: [
+        { label: "Oct '25", value: 0.647, sub: "Warm" },
+        { label: "Nov '25", value: 0.604, sub: "Gentle" },
+        { label: "Dec '25", value: 0.713, sub: "Aglow" },
+        { label: "Jan '26", value: 0.731, sub: "Radiant" },
+        { label: "Feb '26", value: 0.715, sub: "Glowing" },
+        { label: "Mar '26", value: 0.627, sub: "Cozy" },
+        { label: "Apr '26", value: 0.600, sub: "Soft" },
+        { label: "May '26", value: 0.657, sub: "Sunlit" },
+        { label: "Jun '26", value: 0.555, sub: "Tender" },
+      ],
+    },
+
+    // ---- NLP topic extraction: what we keep coming back to (message counts) ----
+    topics: {
+      eyebrow: "What we talk about",
+      title: "The things we keep coming back to",
+      emphasis: "back",
+      caption:
+        "Across every conversation, we kept circling back to the same eight things.",
+      note: "Eight little worlds, and somehow every one of them is just us.",
+      items: [
+        { label: "Family", value: 2531, sub: "the people we're building toward", me: 1334, you: 1197 },
+        { label: "Calls", value: 2264, sub: "hearing your voice, always", me: 1349, you: 915 },
+        { label: "Looks & photos", value: 1239, sub: "every face you ever sent me", me: 716, you: 523 },
+        { label: "Studies & work", value: 1045, sub: "cheering each other's long days", me: 600, you: 445 },
+        { label: "Distance & meeting", value: 944, sub: "counting down to closer", me: 499, you: 445 },
+        { label: "Food", value: 901, sub: "what we'd cook and share", me: 432, you: 469 },
+        { label: "Faith & God", value: 734, sub: "praying through it together", me: 334, you: 400 },
+        { label: "Our future", value: 429, sub: "the life we're quietly planning", me: 219, you: 210 },
+      ],
+    },
   },
 
   // ---- Why I Love You (flip cards) -----------------------------
